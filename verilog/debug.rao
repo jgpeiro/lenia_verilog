@@ -1,0 +1,148 @@
+<?xml version="1" encoding="UTF-8"?>
+<GAO_CONFIG>
+    <Version>3.0</Version>
+    <Mode>Lite</Mode>
+    <AoCore_Lite index="0" sample_clock="sys_clk" trig_type="0" capture_amount="4096" implemention="0" input_register_enabled="0" capture_init_data_enabled="0" module_name="top">
+        <SignalList>
+            <Bus capture_enable="true" name="state[3:0]">
+                <Signal>state[3]</Signal>
+                <Signal>state[2]</Signal>
+                <Signal>state[1]</Signal>
+                <Signal>state[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="state_refresh[3:0]">
+                <Signal>state_refresh[3]</Signal>
+                <Signal>state_refresh[2]</Signal>
+                <Signal>state_refresh[1]</Signal>
+                <Signal>state_refresh[0]</Signal>
+            </Bus>
+            <Signal capture_enable="true">rd</Signal>
+            <Signal capture_enable="true">wr</Signal>
+            <Signal capture_enable="true">refresh</Signal>
+            <Signal capture_enable="true">busy</Signal>
+            <Signal capture_enable="true">data_ready</Signal>
+            <Bus capture_enable="true" name="addr[22:0]">
+                <Signal>addr[22]</Signal>
+                <Signal>addr[21]</Signal>
+                <Signal>addr[20]</Signal>
+                <Signal>addr[19]</Signal>
+                <Signal>addr[18]</Signal>
+                <Signal>addr[17]</Signal>
+                <Signal>addr[16]</Signal>
+                <Signal>addr[15]</Signal>
+                <Signal>addr[14]</Signal>
+                <Signal>addr[13]</Signal>
+                <Signal>addr[12]</Signal>
+                <Signal>addr[11]</Signal>
+                <Signal>addr[10]</Signal>
+                <Signal>addr[9]</Signal>
+                <Signal>addr[8]</Signal>
+                <Signal>addr[7]</Signal>
+                <Signal>addr[6]</Signal>
+                <Signal>addr[5]</Signal>
+                <Signal>addr[4]</Signal>
+                <Signal>addr[3]</Signal>
+                <Signal>addr[2]</Signal>
+                <Signal>addr[1]</Signal>
+                <Signal>addr[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="din[31:0]">
+                <Signal>din[31]</Signal>
+                <Signal>din[30]</Signal>
+                <Signal>din[29]</Signal>
+                <Signal>din[28]</Signal>
+                <Signal>din[27]</Signal>
+                <Signal>din[26]</Signal>
+                <Signal>din[25]</Signal>
+                <Signal>din[24]</Signal>
+                <Signal>din[23]</Signal>
+                <Signal>din[22]</Signal>
+                <Signal>din[21]</Signal>
+                <Signal>din[20]</Signal>
+                <Signal>din[19]</Signal>
+                <Signal>din[18]</Signal>
+                <Signal>din[17]</Signal>
+                <Signal>din[16]</Signal>
+                <Signal>din[15]</Signal>
+                <Signal>din[14]</Signal>
+                <Signal>din[13]</Signal>
+                <Signal>din[12]</Signal>
+                <Signal>din[11]</Signal>
+                <Signal>din[10]</Signal>
+                <Signal>din[9]</Signal>
+                <Signal>din[8]</Signal>
+                <Signal>din[7]</Signal>
+                <Signal>din[6]</Signal>
+                <Signal>din[5]</Signal>
+                <Signal>din[4]</Signal>
+                <Signal>din[3]</Signal>
+                <Signal>din[2]</Signal>
+                <Signal>din[1]</Signal>
+                <Signal>din[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="dout[31:0]">
+                <Signal>dout[31]</Signal>
+                <Signal>dout[30]</Signal>
+                <Signal>dout[29]</Signal>
+                <Signal>dout[28]</Signal>
+                <Signal>dout[27]</Signal>
+                <Signal>dout[26]</Signal>
+                <Signal>dout[25]</Signal>
+                <Signal>dout[24]</Signal>
+                <Signal>dout[23]</Signal>
+                <Signal>dout[22]</Signal>
+                <Signal>dout[21]</Signal>
+                <Signal>dout[20]</Signal>
+                <Signal>dout[19]</Signal>
+                <Signal>dout[18]</Signal>
+                <Signal>dout[17]</Signal>
+                <Signal>dout[16]</Signal>
+                <Signal>dout[15]</Signal>
+                <Signal>dout[14]</Signal>
+                <Signal>dout[13]</Signal>
+                <Signal>dout[12]</Signal>
+                <Signal>dout[11]</Signal>
+                <Signal>dout[10]</Signal>
+                <Signal>dout[9]</Signal>
+                <Signal>dout[8]</Signal>
+                <Signal>dout[7]</Signal>
+                <Signal>dout[6]</Signal>
+                <Signal>dout[5]</Signal>
+                <Signal>dout[4]</Signal>
+                <Signal>dout[3]</Signal>
+                <Signal>dout[2]</Signal>
+                <Signal>dout[1]</Signal>
+                <Signal>dout[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="refresh_cnt[7:0]">
+                <Signal>refresh_cnt[7]</Signal>
+                <Signal>refresh_cnt[6]</Signal>
+                <Signal>refresh_cnt[5]</Signal>
+                <Signal>refresh_cnt[4]</Signal>
+                <Signal>refresh_cnt[3]</Signal>
+                <Signal>refresh_cnt[2]</Signal>
+                <Signal>refresh_cnt[1]</Signal>
+                <Signal>refresh_cnt[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="led[5:0]">
+                <Signal>led[5]</Signal>
+                <Signal>led[4]</Signal>
+                <Signal>led[3]</Signal>
+                <Signal>led[2]</Signal>
+                <Signal>led[1]</Signal>
+                <Signal>led[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="leds[7:0]">
+                <Signal>leds[7]</Signal>
+                <Signal>leds[6]</Signal>
+                <Signal>leds[5]</Signal>
+                <Signal>leds[4]</Signal>
+                <Signal>leds[3]</Signal>
+                <Signal>leds[2]</Signal>
+                <Signal>leds[1]</Signal>
+                <Signal>leds[0]</Signal>
+            </Bus>
+        </SignalList>
+    </AoCore_Lite>
+    <GAO_ID>0101000110010010</GAO_ID>
+</GAO_CONFIG>

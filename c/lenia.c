@@ -31,27 +31,27 @@ void lenia_reset(struct lenia_t *lenia) {
 }
 
 void lenia_random(struct lenia_t *lenia, int w, int h) {
-	for( int i = SIZE/2-w/2 ; i < SIZE/2+w/2 ; i++ )
-	{
-		for( int j = SIZE/2-h/2 ; j < SIZE/2+h/2 ; j++ )
-		{
-			lenia->world[i][j] = ((float)rand())/RAND_MAX;
-		}
-	}
+    for( int i = SIZE/2-w/2 ; i < SIZE/2+w/2 ; i++ )
+    {
+        for( int j = SIZE/2-h/2 ; j < SIZE/2+h/2 ; j++ )
+        {
+            lenia->world[i][j] = ((float)rand())/RAND_MAX;
+        }
+    }
 }
 
 void lenia_print( struct lenia_t *lenia, uint8_t kernel ) {
     int i, j;
     for( i=0; i<SIZE; i++ ) {
         for( j=0; j<SIZE; j++ ) {
-        	if( kernel )
-        	{
+            if( kernel )
+            {
                 printf("%s", lenia->kernel[i][j]<0.5?" ":"*");
-        	}
-        	else
-        	{
+            }
+            else
+            {
                 printf("%s", lenia->world[i][j]<0.5?" ":"*");
-        	}
+            }
         }
         printf("\r\n");
     }
@@ -130,20 +130,17 @@ float covolve2D(float kernel[SIZE][SIZE], float world[SIZE][SIZE], int i, int j)
 {
     int k, l;
     float sum = 0;
-    //for (k = SIZE/2-SIZE/4; k < SIZE/2+SIZE/4; k++) {
-    //    for (l = SIZE/2-SIZE/4; l < SIZE/2+SIZE/4; l++) {
-
     for (k = 0; k < SIZE; k++) {
         for (l = 0; l < SIZE; l++) {
-    		int x = i + k - SIZE/2;
-        	int y = j + l - SIZE/2;
-        	if( 0 <= x && x < SIZE )
-        	{
-        		if( 0 <= y && y < SIZE )
-        		{
+            int x = i + k - SIZE/2;
+            int y = j + l - SIZE/2;
+            if( 0 <= x && x < SIZE )
+            {
+                if( 0 <= y && y < SIZE )
+                {
                     sum += kernel[k][l] * world[x][y];
-        		}
-        	}
+                }
+            }
         }
     }
     return sum;
