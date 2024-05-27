@@ -19,7 +19,16 @@ module top
     output [1:0] O_sdram_ba,        // two banks
     output [3:0] O_sdram_dqm,       // 32/4
 
-    output [5:0] led
+    output [5:0] led,
+
+    output         LCD_CLK,
+    output         LCD_VSYNC,
+    output         LCD_HSYNC,
+    output         LCD_DE,
+    output         LCD_BL,
+    output [4:0]   LCD_R,
+    output [5:0]   LCD_G,
+    output [4:0]   LCD_B
 
     //output uart_txp
   );
@@ -184,6 +193,31 @@ sdram #(.FREQ(FREQ)) u_sdram (
         end
     end
 
+
+    // LCD clock
+    wire lcd_clk;
+    Div #( .CNT_MAX(1) ) div0 (
+        .i_rst(0),
+        .i_clk(clk),
+        .o_clk(lcd_clk)
+    );
+    
+    wire [15:0] x;
+    wire [15:0] y;
+    Vga vga0(
+        .i_rst(0),
+        .i_clk(clk),
+        .o_dclk(LCD_CLK),
+        .o_hsync(LCD_HSYNC),
+        .o_vsync(LCD_VSYNC),
+        .o_de(LCD_DE),
+        .o_bl(LCD_BL),
+        .o_x(x),
+        .o_y(y)
+    );
+    assign LCD_R = dout;//(x&15'h31)?5'h1F:5'h00;
+    assign LCD_G = 0;//(y&15'h31)?6'h3F:6'h00;
+    assign LCD_B = 0;//(x&15'h31)?5'h1F:5'h00;
 endmodule
 
 
