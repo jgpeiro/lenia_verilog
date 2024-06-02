@@ -1,0 +1,76 @@
+[*]
+[*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
+[*] Sat Jun 01 13:41:18 2024
+[*]
+[dumpfile] "C:\git\lenia_verilog\zynq\axi_convolution_tb.vcd"
+[dumpfile_mtime] "Sat Jun 01 13:40:40 2024"
+[dumpfile_size] 8542
+[savefile] "C:\git\lenia_verilog\zynq\signals_axi_convolution.gtkw"
+[timestart] 0
+[size] 1280 729
+[pos] -1 -1
+*-18.013144 202000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] axi_convolution_tb.
+[sst_width] 197
+[signals_width] 309
+[sst_expanded] 1
+[sst_vpaned_height] 334
+@28
+axi_convolution_tb.S_AXI_ARESETN
+axi_convolution_tb.S_AXI_ACLK
+@200
+-Write
+@22
+[color] 2
+axi_convolution_tb.S_AXI_AWADDR[6:0]
+@23
+axi_convolution_tb.dut.S_AXI_AWADDR[6:0]
+@28
+axi_convolution_tb.S_AXI_AWVALID
+@22
+[color] 2
+axi_convolution_tb.S_AXI_WDATA[31:0]
+axi_convolution_tb.S_AXI_WSTRB[3:0]
+@28
+axi_convolution_tb.S_AXI_WVALID
+[color] 3
+axi_convolution_tb.S_AXI_AWREADY
+[color] 3
+axi_convolution_tb.S_AXI_WREADY
+axi_convolution_tb.S_AXI_BREADY
+axi_convolution_tb.S_AXI_BVALID
+@200
+-Read
+@22
+axi_convolution_tb.S_AXI_ARADDR[6:0]
+@28
+axi_convolution_tb.S_AXI_ARVALID
+[color] 3
+axi_convolution_tb.S_AXI_ARREADY
+axi_convolution_tb.S_AXI_ARVALID
+axi_convolution_tb.S_AXI_RREADY
+[color] 3
+axi_convolution_tb.S_AXI_RVALID
+@22
+[color] 2
+axi_convolution_tb.S_AXI_RDATA[31:0]
+@200
+-Result
+@22
+axi_convolution_tb.result[31:0]
+@200
+-State
+@28
+axi_convolution_tb.dut.start_convolution
+axi_convolution_tb.dut.start_convolution
+@22
+axi_convolution_tb.dut.convolution_result[31:0]
+axi_convolution_tb.dut.slv_reg_i[31:0]
+axi_convolution_tb.dut.slv_reg_j[31:0]
+axi_convolution_tb.dut.reg_data_out[31:0]
+@28
+axi_convolution_tb.dut.slv_reg_wren
+@22
+axi_convolution_tb.dut.axi_addr[6:0]
+[pattern_trace] 1
+[pattern_trace] 0

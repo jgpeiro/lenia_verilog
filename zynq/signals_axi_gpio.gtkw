@@ -1,0 +1,52 @@
+[*]
+[*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
+[*] Fri May 31 06:15:30 2024
+[*]
+[dumpfile] "C:\git\lenia_verilog\zynq\axi4_gpio_tb.vcd"
+[dumpfile_mtime] "Fri May 31 06:05:07 2024"
+[dumpfile_size] 2950
+[savefile] "C:\git\lenia_verilog\zynq\signals_axi_gpio.gtkw"
+[timestart] 0
+[size] 1280 729
+[pos] -113 -113
+*-16.073595 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] axi4_gpio_tb.
+[sst_width] 197
+[signals_width] 150
+[sst_expanded] 1
+[sst_vpaned_height] 198
+axi4_gpio_tb.clk
+axi4_gpio_tb.resetn
+--AXI4-lite interface
+--WRITE
+axi4_gpio_tb.axi_awaddr[31:0]
+axi4_gpio_tb.axi_awvalid
+[color] 2
+axi4_gpio_tb.axi_awready
+axi4_gpio_tb.axi_wdata[31:0]
+axi4_gpio_tb.axi_wstrb[3:0]
+axi4_gpio_tb.axi_wvalid
+[color] 2
+axi4_gpio_tb.axi_wready
+[color] 2
+axi4_gpio_tb.axi_bresp[1:0]
+[color] 2
+axi4_gpio_tb.axi_bvalid
+axi4_gpio_tb.axi_bready
+--READ
+axi4_gpio_tb.axi_araddr[31:0]
+axi4_gpio_tb.axi_arvalid
+[color] 2
+axi4_gpio_tb.axi_arready
+[color] 2
+axi4_gpio_tb.axi_rdata[31:0]
+[color] 2
+axi4_gpio_tb.axi_rresp[1:0]
+[color] 2
+axi4_gpio_tb.axi_rvalid
+axi4_gpio_tb.axi_rready
+--GPIO interface
+axi4_gpio_tb.gpio_out[31:0]
+axi4_gpio_tb.gpio_in[31:0]
+[pattern_trace] 1
+[pattern_trace] 0

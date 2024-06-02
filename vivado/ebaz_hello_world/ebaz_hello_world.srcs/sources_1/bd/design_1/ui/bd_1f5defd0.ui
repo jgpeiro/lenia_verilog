@@ -1,0 +1,149 @@
+{
+   "ActiveEmotionalView":"No Loops",
+   "Addressing View_Layers":"/processing_system7_0_FCLK_RESET0_N:false|/proc_sys_reset_0_peripheral_aresetn:false|/processing_system7_0_FCLK_CLK0:false|",
+   "Addressing View_ScaleFactor":"1.5",
+   "Addressing View_TopLeft":"-235,-175",
+   "Color Coded_ExpandedHierarchyInLayout":"",
+   "Color Coded_Layout":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS-threadsafe
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -lvl 4 -x 980 -y 140 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 4 -x 980 -y 300 -defaultsOSRD
+preplace port port-id_UART0_TX_0 -pg 1 -lvl 4 -x 980 -y 330 -defaultsOSRD
+preplace port port-id_UART0_RX_0 -pg 1 -lvl 0 -x 0 -y 210 -defaultsOSRD
+preplace port port-id_pwm_out_0 -pg 1 -lvl 4 -x 980 -y 220 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -x 220 -y 350 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 1 -x 220 -y 100 -defaultsOSRD
+preplace inst axi_pwm_0 -pg 1 -lvl 3 -x 850 -y 220 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 19 18 20} -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 590 -y 440 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 60 58 61 59 62} -defaultsOSRD
+preplace netloc UART0_RX_0_1 1 0 2 NJ 210 410
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 20 220 430 240 NJ
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 30 200 420
+preplace netloc processing_system7_0_UART0_TX 1 1 3 450J 320 730J 330 NJ
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 1 2 440 220 NJ
+preplace netloc axi_pwm_0_pwm_out 1 3 1 NJ 220
+preplace netloc processing_system7_0_DDR 1 1 3 450J 140 NJ 140 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 1 3 NJ 300 NJ 300 NJ
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 N 380
+preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 740 200n
+levelinfo -pg 1 0 220 590 850 980
+pagesize -pg 1 -db -bbox -sgen -130 0 1110 560
+",
+   "Color Coded_ScaleFactor":"1.5",
+   "Color Coded_TopLeft":"-130,-1",
+   "Default View_Layers":"/processing_system7_0_FCLK_CLK0:true|/processing_system7_0_FCLK_RESET0_N:true|/proc_sys_reset_0_peripheral_aresetn:true|",
+   "Default View_ScaleFactor":"1.5",
+   "Default View_TopLeft":"-230,-71",
+   "Display-PortTypeClock":"true",
+   "Display-PortTypeOthers":"true",
+   "Display-PortTypeReset":"true",
+   "ExpandedHierarchyInLayout":"",
+   "Grouping and No Loops_ExpandedHierarchyInLayout":"",
+   "Grouping and No Loops_Layout":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS-threadsafe
+#  -string -flagsOSRD
+preplace port group_1 -pg 1 -lvl 4 -x 980 -y 420 -defaultsOSRD
+preplace port port-id_UART0_TX_0 -pg 1 -lvl 4 -x 980 -y 450 -defaultsOSRD
+preplace port port-id_UART0_RX_0 -pg 1 -lvl 0 -x 0 -y 220 -defaultsOSRD
+preplace port port-id_pwm_out_0 -pg 1 -lvl 4 -x 980 -y 280 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -x 190 -y 300 -swap {43 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 44 45 0} -defaultsOSRD -pinBusDir group_1 right -pinBusY group_1 140R -pinDir UART_0 right -pinY UART_0 20R -pinDir UART_0.UART0_TX right -pinY UART_0.UART0_TX 40R -pinDir UART_0.UART0_RX right -pinY UART_0.UART0_RX 60R -pinDir M_AXI_GP0 right -pinY M_AXI_GP0 120R -pinDir M_AXI_GP0_ACLK right -pinY M_AXI_GP0_ACLK 160R -pinDir FCLK_CLK0 right -pinY FCLK_CLK0 180R -pinDir FCLK_RESET0_N right -pinY FCLK_RESET0_N 0R
+preplace inst proc_sys_reset_0 -pg 1 -lvl 1 -x 190 -y 60 -swap {9 4 1 2 3 0 5 6 7 8} -defaultsOSRD -pinDir slowest_sync_clk right -pinY slowest_sync_clk 100R -pinDir ext_reset_in left -pinY ext_reset_in 100L -pinDir aux_reset_in left -pinY aux_reset_in 0L -pinDir mb_debug_sys_rst left -pinY mb_debug_sys_rst 20L -pinDir dcm_locked left -pinY dcm_locked 40L -pinDir mb_reset right -pinY mb_reset 0R -pinBusDir bus_struct_reset right -pinBusY bus_struct_reset 20R -pinBusDir peripheral_reset right -pinBusY peripheral_reset 40R -pinBusDir interconnect_aresetn right -pinBusY interconnect_aresetn 60R -pinBusDir peripheral_aresetn right -pinBusY peripheral_aresetn 80R
+preplace inst axi_pwm_0 -pg 1 -lvl 3 -x 850 -y 280 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 19 18 20} -defaultsOSRD -pinDir s_axi left -pinY s_axi 0L -pinDir clk left -pinY clk 80L -pinDir resetn left -pinY resetn 20L -pinDir pwm_out right -pinY pwm_out 0R
+preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 560 -y 420 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 62 58 60 59 61} -defaultsOSRD -pinDir S00_AXI left -pinY S00_AXI 0L -pinDir M00_AXI right -pinY M00_AXI 0R -pinDir ACLK left -pinY ACLK 20L -pinDir ARESETN left -pinY ARESETN 120L -pinDir S00_ACLK left -pinY S00_ACLK 40L -pinDir S00_ARESETN left -pinY S00_ARESETN 80L -pinDir M00_ACLK left -pinY M00_ACLK 60L -pinDir M00_ARESETN left -pinY M00_ARESETN 100L
+preplace netloc netgroup_1 1 1 3 360J 320 740J 420 NJ
+preplace netloc UART0_RX_0_1 1 0 2 NJ 220 380
+preplace netloc processing_system7_0_FCLK_CLK0 1 1 2 400 360 N
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 20 240 360
+preplace netloc processing_system7_0_UART0_TX 1 1 3 NJ 340 700J 450 NJ
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 1 2 420 300 NJ
+preplace netloc axi_pwm_0_pwm_out 1 3 1 NJ 280
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 N 420
+preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 720 280n
+levelinfo -pg 1 0 190 560 850 980
+pagesize -pg 1 -db -bbox -sgen -130 0 1110 600
+",
+   "Grouping and No Loops_ScaleFactor":"1.45725",
+   "Grouping and No Loops_TopLeft":"-128,-9",
+   "Interfaces View_Layers":"/processing_system7_0_FCLK_CLK0:false|/processing_system7_0_FCLK_RESET0_N:false|/proc_sys_reset_0_peripheral_aresetn:false|",
+   "Interfaces View_ScaleFactor":"1.5",
+   "Interfaces View_TopLeft":"-386,-171",
+   "No Loops_ExpandedHierarchyInLayout":"",
+   "No Loops_Layers":"/processing_system7_0_FCLK_RESET0_N:true|/processing_system7_0_FCLK_CLK0:true|/proc_sys_reset_0_peripheral_aresetn:true|",
+   "No Loops_Layout":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -lvl 4 -x 1000 -y 540 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 4 -x 1000 -y 620 -defaultsOSRD
+preplace port pwm_out_0 -pg 1 -lvl 4 -x 1000 -y 440 -defaultsOSRD
+preplace port port-id_UART0_TX_0 -pg 1 -lvl 4 -x 1000 -y 650 -defaultsOSRD
+preplace port port-id_UART0_RX_0 -pg 1 -lvl 0 -x -20 -y 240 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -x 190 -y 300 -swap {16 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 26 17 18 19 20 21 22 23 24 25 0 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67} -defaultsOSRD -pinDir DDR right -pinY DDR 20R -pinDir FIXED_IO right -pinY FIXED_IO 100R -pinDir UART_0 right -pinY UART_0 40R -pinDir UART_0.UART0_TX right -pinY UART_0.UART0_TX 60R -pinDir UART_0.UART0_RX right -pinY UART_0.UART0_RX 80R -pinDir M_AXI_GP0 right -pinY M_AXI_GP0 0R -pinDir M_AXI_GP0_ACLK right -pinY M_AXI_GP0_ACLK 120R -pinDir FCLK_CLK0 right -pinY FCLK_CLK0 140R -pinDir FCLK_RESET0_N left -pinY FCLK_RESET0_N 0L
+preplace inst proc_sys_reset_0 -pg 1 -lvl 1 -x 190 -y 60 -swap {9 4 1 2 3 0 5 6 7 8} -defaultsOSRD -pinDir slowest_sync_clk right -pinY slowest_sync_clk 100R -pinDir ext_reset_in left -pinY ext_reset_in 100L -pinDir aux_reset_in left -pinY aux_reset_in 0L -pinDir mb_debug_sys_rst left -pinY mb_debug_sys_rst 20L -pinDir dcm_locked left -pinY dcm_locked 40L -pinDir mb_reset right -pinY mb_reset 0R -pinBusDir bus_struct_reset right -pinBusY bus_struct_reset 20R -pinBusDir peripheral_reset right -pinBusY peripheral_reset 40R -pinBusDir interconnect_aresetn right -pinBusY interconnect_aresetn 60R -pinBusDir peripheral_aresetn right -pinBusY peripheral_aresetn 80R
+preplace inst axi_gpio_0 -pg 1 -lvl 3 -x 870 -y 440 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 21 20} -defaultsOSRD -pinDir S_AXI left -pinY S_AXI 0L -pinDir GPIO right -pinY GPIO 0R -pinDir s_axi_aclk left -pinY s_axi_aclk 40L -pinDir s_axi_aresetn left -pinY s_axi_aresetn 20L
+preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 600 -y 300 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 57 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 39 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 79 75 80 76 81 77 82 78} -defaultsOSRD -pinDir S00_AXI left -pinY S00_AXI 0L -pinDir M00_AXI right -pinY M00_AXI 140R -pinDir M01_AXI right -pinY M01_AXI 0R -pinDir ACLK left -pinY ACLK 100L -pinDir ARESETN left -pinY ARESETN 20L -pinDir S00_ACLK left -pinY S00_ACLK 120L -pinDir S00_ARESETN left -pinY S00_ARESETN 40L -pinDir M00_ACLK left -pinY M00_ACLK 140L -pinDir M00_ARESETN left -pinY M00_ARESETN 60L -pinDir M01_ACLK left -pinY M01_ACLK 160L -pinDir M01_ARESETN left -pinY M01_ARESETN 80L
+preplace inst axi_convolution_0 -pg 1 -lvl 3 -x 870 -y 300 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 19 18} -defaultsOSRD -pinDir S_AXI left -pinY S_AXI 0L -pinDir S_AXI_ACLK left -pinY S_AXI_ACLK 40L -pinDir S_AXI_ARESETN left -pinY S_AXI_ARESETN 20L
+preplace netloc UART0_RX_0_1 1 0 2 NJ 240 380
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 1 2 460 240 740
+preplace netloc processing_system7_0_FCLK_CLK0 1 1 2 440 520 760
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 1 0 160n
+preplace netloc processing_system7_0_UART0_TX 1 1 3 400J 650 NJ 650 NJ
+preplace netloc axi_gpio_0_GPIO 1 3 1 NJ 440
+preplace netloc processing_system7_0_DDR 1 1 3 420J 540 NJ 540 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 1 3 380J 620 NJ 620 NJ
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 N 300
+preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 N 440
+preplace netloc ps7_0_axi_periph_M01_AXI 1 2 1 N 300
+levelinfo -pg 1 -20 190 600 870 1000
+pagesize -pg 1 -db -bbox -sgen -150 0 1130 740
+",
+   "No Loops_ScaleFactor":"1.01757",
+   "No Loops_TopLeft":"-433,3",
+   "Reduced Jogs_ExpandedHierarchyInLayout":"",
+   "Reduced Jogs_Layers":"/processing_system7_0_FCLK_RESET0_N:true|/processing_system7_0_FCLK_CLK0:true|/proc_sys_reset_0_peripheral_aresetn:true|",
+   "Reduced Jogs_Layout":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS-threadsafe
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -lvl 4 -x 1000 -y 300 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 4 -x 1000 -y 330 -defaultsOSRD
+preplace port port-id_UART0_TX_0 -pg 1 -lvl 4 -x 1000 -y 370 -defaultsOSRD
+preplace port port-id_UART0_RX_0 -pg 1 -lvl 0 -x 0 -y 220 -defaultsOSRD
+preplace port port-id_pwm_out_0 -pg 1 -lvl 4 -x 1000 -y 200 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -x 230 -y 300 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 67 66} -defaultsOSRD -pinY DDR 0R -pinY FIXED_IO 30R -pinY UART_0 50R -pinY UART_0.UART0_TX 70R -pinY UART_0.UART0_RX 90R -pinY M_AXI_GP0 130R -pinY M_AXI_GP0_ACLK 0L -pinY FCLK_CLK0 170R -pinY FCLK_RESET0_N 150R
+preplace inst proc_sys_reset_0 -pg 1 -lvl 1 -x 230 -y 60 -swap {3 4 0 1 2 5 6 7 8 9} -defaultsOSRD -pinY slowest_sync_clk 60L -pinY ext_reset_in 80L -pinY aux_reset_in 0L -pinY mb_debug_sys_rst 20L -pinY dcm_locked 40L -pinY mb_reset 0R -pinBusY bus_struct_reset 20R -pinBusY peripheral_reset 40R -pinBusY interconnect_aresetn 60R -pinBusY peripheral_aresetn 80R
+preplace inst axi_pwm_0 -pg 1 -lvl 3 -x 870 -y 200 -defaultsOSRD -pinY s_axi 0L -pinY clk 20L -pinY resetn 40L -pinY pwm_out 0R
+preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 620 -y 430 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 62 58 60 59 61} -defaultsOSRD -pinY S00_AXI 0L -pinY M00_AXI 0R -pinY ACLK 20L -pinY ARESETN 120L -pinY S00_ACLK 40L -pinY S00_ARESETN 80L -pinY M00_ACLK 60L -pinY M00_ARESETN 100L
+preplace netloc UART0_RX_0_1 1 0 2 NJ 220 440
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 20 200 460 220 NJ
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 40 240 420
+preplace netloc processing_system7_0_UART0_TX 1 1 3 NJ 370 NJ 370 NJ
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 1 2 480 240 NJ
+preplace netloc axi_pwm_0_pwm_out 1 3 1 NJ 200
+preplace netloc processing_system7_0_DDR 1 1 3 NJ 300 NJ 300 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 1 3 NJ 330 NJ 330 NJ
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 N 430
+preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 760 200n
+levelinfo -pg 1 0 230 620 870 1000
+pagesize -pg 1 -db -bbox -sgen -130 0 1130 610
+",
+   "Reduced Jogs_ScaleFactor":"1.38033",
+   "Reduced Jogs_TopLeft":"-174,0",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -lvl 3 -x 780 -y 80 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 3 -x 780 -y 160 -defaultsOSRD
+preplace port port-id_UART0_TX_0 -pg 1 -lvl 3 -x 780 -y 120 -defaultsOSRD
+preplace port port-id_UART0_RX_0 -pg 1 -lvl 0 -x 0 -y 260 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -x 210 -y 130 -swap {16 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 26 17 18 19 20 21 22 23 24 25 0 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67} -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 2 -x 590 -y 260 -swap {2 3 0 4 1 5 6 7 8 9} -defaultsOSRD
+preplace netloc UART0_RX_0_1 1 0 2 NJ 260 400
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 2 20 270 420
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 1 410 200n
+preplace netloc processing_system7_0_UART0_TX 1 1 2 NJ 120 NJ
+preplace netloc processing_system7_0_DDR 1 1 2 NJ 80 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 1 2 NJ 160 NJ
+levelinfo -pg 1 0 210 590 780
+pagesize -pg 1 -db -bbox -sgen -130 0 910 360
+"
+}
+{
+   "da_axi4_cnt":"5",
+   "da_board_cnt":"3",
+   "da_clkrst_cnt":"2",
+   "da_ps7_cnt":"1"
+}

@@ -59,144 +59,146 @@ module sdram
     output reg        busy
 );
 
-assign SDRAM_DQ = dq_oen ? 32'bzzzz_zzzz_zzzz_zzzz_zzzz_zzzz_zzzz_zzzz : dq_out;
-wire [DATA_WIDTH-1:0] dq_in = SDRAM_DQ;
-reg [31:0] dout_buf;
-assign dout = data_ready ? dq_in : dout_buf;
-assign SDRAM_CLK = clk_sdram;
-assign SDRAM_CKE = 1'b1;
-assign SDRAM_nCS = 1'b0;
+    assign SDRAM_DQ = dq_oen ? 32'bzzzz_zzzz_zzzz_zzzz_zzzz_zzzz_zzzz_zzzz : dq_out;
+    wire [DATA_WIDTH-1:0] dq_in = SDRAM_DQ;
+    reg [31:0] dout_buf;
+    
+    assign dout = data_ready ? dq_in : dout_buf;
+    assign SDRAM_CLK = clk_sdram;
+    assign SDRAM_CKE = 1'b1;
+    assign SDRAM_nCS = 1'b0;
 
-reg [2:0] state;
-localparam INIT = 3'd0;
-localparam CONFIG = 3'd1;
-localparam IDLE = 3'd2;
-localparam READ = 3'd3;
-localparam WRITE = 3'd4;
-localparam REFRESH = 3'd5;
+    reg [2:0] state;
+    localparam INIT = 3'd0;
+    localparam CONFIG = 3'd1;
+    localparam IDLE = 3'd2;
+    localparam READ = 3'd3;
+    localparam WRITE = 3'd4;
+    localparam REFRESH = 3'd5;
 
-localparam CMD_SetModeReg=3'b000;
-localparam CMD_AutoRefresh=3'b001;
-localparam CMD_PreCharge=3'b010;
-localparam CMD_BankActivate=3'b011;
-localparam CMD_Write=3'b100;
-localparam CMD_Read=3'b101;
-localparam CMD_NOP=3'b111;
+    localparam CMD_SetModeReg=3'b000;
+    localparam CMD_AutoRefresh=3'b001;
+    localparam CMD_PreCharge=3'b010;
+    localparam CMD_BankActivate=3'b011;
+    localparam CMD_Write=3'b100;
+    localparam CMD_Read=3'b101;
+    localparam CMD_NOP=3'b111;
 
-localparam [2:0] BURST_LEN = 3'b0;
-localparam BURST_MODE = 1'b0;
-localparam [10:0] MODE_REG = {4'b0, CAS[2:0], BURST_MODE, BURST_LEN};
+    localparam [2:0] BURST_LEN = 3'b0;
+    localparam BURST_MODE = 1'b0;
+    localparam [10:0] MODE_REG = {4'b0, CAS[2:0], BURST_MODE, BURST_LEN};
 
-reg cfg_now;
-reg [3:0] cycle;
-reg [31:0] din_buf;
-reg [22:0] addr_buf;
-reg dq_oen;
-reg [DATA_WIDTH-1:0] dq_out;
+    reg cfg_now;
+    reg [3:0] cycle;
+    reg [31:0] din_buf;
+    reg [22:0] addr_buf;
+    reg dq_oen;
+    reg [DATA_WIDTH-1:0] dq_out;
 
-always @(posedge clk) begin
-    cycle <= cycle == 4'd15 ? 4'd15 : cycle + 4'd1;
-    {SDRAM_nRAS, SDRAM_nCAS, SDRAM_nWE} <= CMD_NOP; 
-    casex ({state, cycle})
-        {INIT, 4'bxxxx} : if (cfg_now) begin
-            state <= CONFIG;
-            cycle <= 0;
-        end
-        {CONFIG, 4'd0} : begin
-            {SDRAM_nRAS, SDRAM_nCAS, SDRAM_nWE} <= CMD_PreCharge;
-            SDRAM_A[10] <= 1'b1;
-        end
-        {CONFIG, T_RP} : begin
-            {SDRAM_nRAS, SDRAM_nCAS, SDRAM_nWE} <= CMD_AutoRefresh;
-        end
-        {CONFIG, T_RP+T_RC} : begin
-            {SDRAM_nRAS, SDRAM_nCAS, SDRAM_nWE} <= CMD_AutoRefresh;
-        end
-        {CONFIG, T_RP+T_RC+T_RC} : begin
-            {SDRAM_nRAS, SDRAM_nCAS, SDRAM_nWE} <= CMD_SetModeReg;
-            SDRAM_A[10:0] <= MODE_REG;
-        end
-        {CONFIG, T_RP+T_RC+T_RC+T_MRD} : begin
-            state <= IDLE;
-            busy <= 1'b0;
-        end
-        {IDLE, 4'bxxxx}: if (rd | wr) begin
-            {SDRAM_nRAS, SDRAM_nCAS, SDRAM_nWE} <= CMD_BankActivate;
-            SDRAM_BA <= addr[ROW_WIDTH+COL_WIDTH+BANK_WIDTH-1 : ROW_WIDTH+COL_WIDTH];
-            SDRAM_A <= addr[ROW_WIDTH+COL_WIDTH-1:COL_WIDTH];
-            state <= rd ? READ : WRITE;
-            addr_buf <= addr;
-            if (wr) din_buf <= din;
-            cycle <= 4'd1;
+    always @(posedge clk) begin
+        cycle <= cycle == 4'd15 ? 4'd15 : cycle + 4'd1;
+        {SDRAM_nRAS, SDRAM_nCAS, SDRAM_nWE} <= CMD_NOP; 
+        casex ({state, cycle})
+            {INIT, 4'bxxxx} : if (cfg_now) begin
+                state <= CONFIG;
+                cycle <= 0;
+            end
+            {CONFIG, 4'd0} : begin
+                {SDRAM_nRAS, SDRAM_nCAS, SDRAM_nWE} <= CMD_PreCharge;
+                SDRAM_A[10] <= 1'b1;
+            end
+            {CONFIG, T_RP} : begin
+                {SDRAM_nRAS, SDRAM_nCAS, SDRAM_nWE} <= CMD_AutoRefresh;
+            end
+            {CONFIG, T_RP+T_RC} : begin
+                {SDRAM_nRAS, SDRAM_nCAS, SDRAM_nWE} <= CMD_AutoRefresh;
+            end
+            {CONFIG, T_RP+T_RC+T_RC} : begin
+                {SDRAM_nRAS, SDRAM_nCAS, SDRAM_nWE} <= CMD_SetModeReg;
+                SDRAM_A[10:0] <= MODE_REG;
+            end
+            {CONFIG, T_RP+T_RC+T_RC+T_MRD} : begin
+                state <= IDLE;
+                busy <= 1'b0;
+            end
+            {IDLE, 4'bxxxx}: if (rd | wr) begin
+                {SDRAM_nRAS, SDRAM_nCAS, SDRAM_nWE} <= CMD_BankActivate;
+                SDRAM_BA <= addr[ROW_WIDTH+COL_WIDTH+BANK_WIDTH-1 : ROW_WIDTH+COL_WIDTH];
+                SDRAM_A <= addr[ROW_WIDTH+COL_WIDTH-1:COL_WIDTH];
+                state <= rd ? READ : WRITE;
+                addr_buf <= addr;
+                if (wr) din_buf <= din;
+                cycle <= 4'd1;
+                busy <= 1'b1;
+            end else if (refresh) begin
+                {SDRAM_nRAS, SDRAM_nCAS, SDRAM_nWE} <= CMD_AutoRefresh;
+                state <= REFRESH;
+                cycle <= 4'd1;
+                busy <= 1'b1;
+            end
+            {READ, T_RCD}: begin
+                {SDRAM_nRAS, SDRAM_nCAS, SDRAM_nWE} <= CMD_Read;
+                SDRAM_A[10] <= 1'b1;
+                SDRAM_A[9:0] <= addr_buf[COL_WIDTH-1:0];
+                SDRAM_DQM <= 4'b0;
+            end
+            {READ, T_RCD+CAS}: begin
+                data_ready <= 1'b1;
+            end
+            {READ, T_RCD+CAS+4'd1}: begin
+                data_ready <= 1'b0;
+                dout_buf <= dq_in;
+                busy <= 0;
+                state <= IDLE;
+            end
+            {WRITE, T_RCD}: begin
+                {SDRAM_nRAS, SDRAM_nCAS, SDRAM_nWE} <= CMD_Write;
+                SDRAM_A[10] <= 1'b1;
+                SDRAM_A[9:0] <= addr_buf[COL_WIDTH-1:0];
+                SDRAM_DQM <= 4'b0;
+                dq_out <= din_buf;
+                dq_oen <= 1'b0;
+            end
+            {WRITE, T_RCD+4'd1}: begin
+                dq_oen <= 1'b1;
+            end
+            {WRITE, T_RCD+T_WR+T_RP}: begin
+                busy <= 0;
+                state <= IDLE;
+            end
+            {REFRESH, T_RC}: begin
+                state <= IDLE;
+                busy <= 0;
+            end
+        endcase
+        
+        if (~resetn) begin
             busy <= 1'b1;
-        end else if (refresh) begin
-            {SDRAM_nRAS, SDRAM_nCAS, SDRAM_nWE} <= CMD_AutoRefresh;
-            state <= REFRESH;
-            cycle <= 4'd1;
-            busy <= 1'b1;
-        end
-        {READ, T_RCD}: begin
-            {SDRAM_nRAS, SDRAM_nCAS, SDRAM_nWE} <= CMD_Read;
-            SDRAM_A[10] <= 1'b1;
-            SDRAM_A[9:0] <= addr_buf[COL_WIDTH-1:0];
-            SDRAM_DQM <= 4'b0;
-        end
-        {READ, T_RCD+CAS}: begin
-            data_ready <= 1'b1;
-        end
-        {READ, T_RCD+CAS+4'd1}: begin
-            data_ready <= 1'b0;
-            dout_buf <= dq_in;
-            busy <= 0;
-            state <= IDLE;
-        end
-        {WRITE, T_RCD}: begin
-            {SDRAM_nRAS, SDRAM_nCAS, SDRAM_nWE} <= CMD_Write;
-            SDRAM_A[10] <= 1'b1;
-            SDRAM_A[9:0] <= addr_buf[COL_WIDTH-1:0];
-            SDRAM_DQM <= 4'b0;
-            dq_out <= din_buf;
-            dq_oen <= 1'b0;
-        end
-        {WRITE, T_RCD+4'd1}: begin
             dq_oen <= 1'b1;
+            SDRAM_DQM <= 4'b0;
+            state <= INIT;
         end
-        {WRITE, T_RCD+T_WR+T_RP}: begin
-            busy <= 0;
-            state <= IDLE;
-        end
-        {REFRESH, T_RC}: begin
-            state <= IDLE;
-            busy <= 0;
-        end
-    endcase
-    if (~resetn) begin
-        busy <= 1'b1;
-        dq_oen <= 1'b1;
-        SDRAM_DQM <= 4'b0;
-        state <= INIT;
     end
-end
 
-reg  [14:0]   rst_cnt;
-reg rst_done, rst_done_p1, cfg_busy;
-  
-always @(posedge clk) begin
-    rst_done_p1 <= rst_done;
-    cfg_now     <= rst_done & ~rst_done_p1;
-    if (rst_cnt != FREQ / 1000 * 200 / 1000) begin
-        rst_cnt  <= rst_cnt[14:0] + 1'b1;
-        rst_done <= 1'b0;
-        cfg_busy <= 1'b1;
-    end else begin
-        rst_done <= 1'b1;
-        cfg_busy <= 1'b0;
+    reg  [14:0]   rst_cnt;
+    reg rst_done, rst_done_p1, cfg_busy;
+      
+    always @(posedge clk) begin
+        rst_done_p1 <= rst_done;
+        cfg_now     <= rst_done & ~rst_done_p1;
+        if (rst_cnt != FREQ / 1000 * 200 / 1000) begin
+            rst_cnt  <= rst_cnt[14:0] + 1'b1;
+            rst_done <= 1'b0;
+            cfg_busy <= 1'b1;
+        end else begin
+            rst_done <= 1'b1;
+            cfg_busy <= 1'b0;
+        end
+        if (~resetn) begin
+            rst_cnt  <= 15'd0;
+            rst_done <= 1'b0;
+            cfg_busy <= 1'b1;
+        end
     end
-    if (~resetn) begin
-        rst_cnt  <= 15'd0;
-        rst_done <= 1'b0;
-        cfg_busy <= 1'b1;
-    end
-end
 
 endmodule

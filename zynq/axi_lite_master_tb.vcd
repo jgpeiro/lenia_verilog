@@ -1,0 +1,324 @@
+$date
+	Fri May 31 15:55:26 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module axi_lite_master_tb $end
+$var wire 3 ! M_AXI_ARPROT [2:0] $end
+$var wire 1 " M_AXI_ARREADY $end
+$var wire 3 # M_AXI_AWPROT [2:0] $end
+$var wire 1 $ M_AXI_AWREADY $end
+$var wire 2 % M_AXI_BRESP [1:0] $end
+$var wire 1 & M_AXI_BVALID $end
+$var wire 32 ' M_AXI_RDATA [31:0] $end
+$var wire 2 ( M_AXI_RRESP [1:0] $end
+$var wire 1 ) M_AXI_RVALID $end
+$var wire 1 * M_AXI_WREADY $end
+$var wire 1 + M_AXI_WVALID $end
+$var wire 4 , M_AXI_WSTRB [3:0] $end
+$var wire 32 - M_AXI_WDATA [31:0] $end
+$var wire 1 . M_AXI_RREADY $end
+$var wire 1 / M_AXI_BREADY $end
+$var wire 1 0 M_AXI_AWVALID $end
+$var wire 32 1 M_AXI_AWADDR [31:0] $end
+$var wire 1 2 M_AXI_ARVALID $end
+$var wire 32 3 M_AXI_ARADDR [31:0] $end
+$var parameter 32 4 AXI_ADDR_WIDTH $end
+$var parameter 32 5 AXI_DATA_WIDTH $end
+$var real 1 6 FREQUENCY $end
+$var real 1 7 clk_period $end
+$var reg 1 8 CLK $end
+$var reg 1 9 RESET_N $end
+$var reg 32 : init_counter [31:0] $end
+$var reg 1 ; init_transaction $end
+$scope module axi_lite_master_i $end
+$var wire 1 8 M_AXI_ACLK $end
+$var wire 32 < M_AXI_ARADDR [31:0] $end
+$var wire 1 9 M_AXI_ARESETN $end
+$var wire 3 = M_AXI_ARPROT [2:0] $end
+$var wire 1 " M_AXI_ARREADY $end
+$var wire 1 2 M_AXI_ARVALID $end
+$var wire 32 > M_AXI_AWADDR [31:0] $end
+$var wire 3 ? M_AXI_AWPROT [2:0] $end
+$var wire 1 $ M_AXI_AWREADY $end
+$var wire 1 0 M_AXI_AWVALID $end
+$var wire 1 / M_AXI_BREADY $end
+$var wire 2 @ M_AXI_BRESP [1:0] $end
+$var wire 1 & M_AXI_BVALID $end
+$var wire 32 A M_AXI_RDATA [31:0] $end
+$var wire 2 B M_AXI_RRESP [1:0] $end
+$var wire 1 ) M_AXI_RVALID $end
+$var wire 32 C M_AXI_WDATA [31:0] $end
+$var wire 1 * M_AXI_WREADY $end
+$var wire 4 D M_AXI_WSTRB [3:0] $end
+$var wire 1 + M_AXI_WVALID $end
+$var wire 1 ; init_transaction $end
+$var wire 1 E write_done $end
+$var wire 1 F start $end
+$var wire 1 G read_done $end
+$var wire 1 . M_AXI_RREADY $end
+$var parameter 32 H AXI_ADDR_WIDTH $end
+$var parameter 32 I AXI_DATA_WIDTH $end
+$var parameter 32 J HSIZE $end
+$var parameter 32 K VSIZE $end
+$var reg 32 L axi_araddr [31:0] $end
+$var reg 1 M axi_arvalid $end
+$var reg 32 N axi_awaddr [31:0] $end
+$var reg 1 O axi_awvalid $end
+$var reg 1 P axi_berror $end
+$var reg 1 Q axi_bready $end
+$var reg 1 R axi_rerror $end
+$var reg 32 S axi_rready [31:0] $end
+$var reg 32 T axi_wdata [31:0] $end
+$var reg 4 U axi_wstrb [3:0] $end
+$var reg 1 V axi_wvalid $end
+$var reg 1 W init_transaction_i $end
+$var reg 32 X rdata_expected [31:0] $end
+$var reg 1 Y start_read $end
+$var reg 1 Z start_write $end
+$var integer 32 [ current_state [31:0] $end
+$var integer 32 \ next_state [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b111100000 K
+b1010000000 J
+b100000 I
+b100000 H
+r20 7
+r50000000 6
+b100000 5
+b100000 4
+$end
+#0
+$dumpvars
+b0 \
+b0 [
+0Z
+0Y
+b0 X
+xW
+xV
+bx U
+b0 T
+bx S
+xR
+xQ
+xP
+xO
+b0 N
+xM
+b0 L
+xG
+xF
+xE
+bx D
+b0 C
+bz B
+bz A
+bz @
+b0 ?
+b0 >
+b0 =
+b0 <
+x;
+bx :
+09
+08
+b0 3
+x2
+b0 1
+x0
+x/
+x.
+b0 -
+bx ,
+x+
+z*
+z)
+bz (
+bz '
+z&
+bz %
+z$
+b0 #
+z"
+b0 !
+$end
+#10000
+0F
+0G
+0E
+0.
+00
+0O
+b0 ,
+b0 D
+b0 U
+0+
+0V
+0P
+0/
+0Q
+02
+0M
+0R
+b0 S
+b0 :
+0;
+18
+#20000
+08
+#30000
+0W
+18
+#40000
+08
+#50000
+18
+#60000
+08
+#70000
+18
+#80000
+08
+#90000
+18
+#100000
+08
+19
+#110000
+xG
+1.
+xE
+b1 :
+b1 S
+1/
+1Q
+18
+#120000
+08
+#130000
+b10 :
+18
+#140000
+08
+#150000
+b11 :
+18
+#160000
+08
+#170000
+b100 :
+18
+#180000
+08
+#190000
+b101 :
+18
+#200000
+08
+#210000
+b110 :
+18
+#220000
+08
+#230000
+b111 :
+18
+#240000
+08
+#250000
+b1000 :
+18
+#260000
+08
+#270000
+b1001 :
+18
+#280000
+08
+#290000
+b1010 :
+18
+#300000
+08
+#310000
+1Z
+b1 \
+1F
+1;
+b1011 :
+18
+#320000
+08
+#330000
+b110000 1
+b110000 >
+b110000 N
+b11 -
+b11 C
+b11 T
+0F
+0Z
+1W
+b1 [
+10
+1O
+b1111 ,
+b1111 D
+b1111 U
+1+
+1V
+0;
+b1100 :
+18
+#340000
+08
+#350000
+b1101 :
+0W
+18
+#360000
+08
+#370000
+b1110 :
+18
+#380000
+08
+#390000
+b1111 :
+18
+#400000
+08
+#410000
+b10000 :
+18
+#420000
+08
+#430000
+b10001 :
+18
+#440000
+08
+#450000
+b10010 :
+18
+#460000
+08
+#470000
+b10011 :
+18
+#480000
+08
+#490000
+b10100 :
+18
+#500000
+08

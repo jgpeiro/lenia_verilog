@@ -1,0 +1,87 @@
+[*]
+[*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
+[*] Thu May 30 18:49:21 2024
+[*]
+[dumpfile] "C:\git\lenia_verilog\zynq\axi4_systolic_array_tb.vcd"
+[dumpfile_mtime] "Thu May 30 17:20:35 2024"
+[dumpfile_size] 21064
+[savefile] "C:\git\lenia_verilog\zynq\signals.gtkw"
+[timestart] 0
+[size] 1920 1009
+[pos] -864 -221
+*-17.664526 5000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] axi4_systolic_array_tb.
+[sst_width] 197
+[signals_width] 238
+[sst_expanded] 1
+[sst_vpaned_height] 297
+@28
+axi4_systolic_array_tb.resetn
+axi4_systolic_array_tb.clk
+@22
+axi4_systolic_array_tb.s_axi_awaddr[31:0]
+@28
+axi4_systolic_array_tb.s_axi_awvalid
+axi4_systolic_array_tb.resetn
+axi4_systolic_array_tb.clk
+@22
+axi4_systolic_array_tb.s_axi_awaddr[31:0]
+@28
+axi4_systolic_array_tb.s_axi_awvalid
+@22
+axi4_systolic_array_tb.s_axi_wdata[31:0]
+axi4_systolic_array_tb.s_axi_wstrb[3:0]
+@28
+axi4_systolic_array_tb.s_axi_wvalid
+axi4_systolic_array_tb.s_axi_bready
+@22
+axi4_systolic_array_tb.s_axi_araddr[31:0]
+@28
+axi4_systolic_array_tb.s_axi_arvalid
+axi4_systolic_array_tb.s_axi_rready
+@200
+-
+-AXI write task
+-// Write address
+@22
+[color] 5
+axi4_systolic_array_tb.s_axi_awaddr[31:0]
+@28
+[color] 2
+axi4_systolic_array_tb.s_axi_awvalid
+@29
+axi4_systolic_array_tb.s_axi_awready
+@200
+-// Write data
+@22
+[color] 4
+axi4_systolic_array_tb.s_axi_wdata[31:0]
+@28
+[color] 2
+axi4_systolic_array_tb.s_axi_wvalid
+@200
+-// Wait for write response
+@28
+[color] 3
+axi4_systolic_array_tb.s_axi_bready
+@200
+-
+-// AXI read task
+-Read address
+@22
+[color] 5
+axi4_systolic_array_tb.s_axi_araddr[31:0]
+@28
+[color] 2
+axi4_systolic_array_tb.s_axi_arvalid
+@200
+-// Wait for read data
+@28
+[color] 3
+axi4_systolic_array_tb.s_axi_rready
+@200
+-// Display read data
+@22
+axi4_systolic_array_tb.s_axi_rdata[31:0]
+[pattern_trace] 1
+[pattern_trace] 0
