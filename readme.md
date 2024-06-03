@@ -1,0 +1,3 @@
+# Lenia Verilog
+
+![](architecture.png)
