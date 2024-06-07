@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+    	
+    <storageModule moduleId="org.eclipse.cdt.core.settings">
+        		
+        <cconfiguration id="com.xilinx.sdx.system.managedbuilder.swemu.configuration.1707308881">
+            			
+            <storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.xilinx.sdx.system.managedbuilder.swemu.configuration.1707308881" moduleId="org.eclipse.cdt.core.settings" name="Emulation-SW">
+                				
+                <externalSettings/>
+                				
+                <extensions>
+                    					
+                    <extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+                    				
+                </extensions>
+                			
+            </storageModule>
+            			
+            <storageModule moduleId="cdtBuildSystem" version="4.0.0">
+                				
+                <configuration artifactName="${ProjName}" buildProperties="" description="" id="com.xilinx.sdx.system.managedbuilder.swemu.configuration.1707308881" name="Emulation-SW" parent="com.xilinx.sdx.system.managedbuilder.swemu.configuration">
+                    					
+                    <folderInfo id="com.xilinx.sdx.system.managedbuilder.swemu.configuration.1707308881." name="/" resourcePath="">
+                        						
+                        <toolChain id="com.xilinx.sdx.system.managedbuilder.sw_emu.2029228940" name="System Toolchain" superClass="com.xilinx.sdx.system.managedbuilder.sw_emu">
+                            							
+                            <targetPlatform id="com.xilinx.sdx.system.managedbuilder.swemu.configuration.1707308881..2134407275" name=""/>
+                            							
+                            <builder buildPath="${workspace_loc:/micropython_embed_system}/Emulation-SW" enableAutoBuild="true" id="com.xilinx.sdx.system.managedbuilder.systemBuilder.1550068185" managedBuildOn="true" name="System Project Builder.Emulation-SW" superClass="com.xilinx.sdx.system.managedbuilder.systemBuilder"/>
+                            							
+                            <tool id="com.xilinx.sdx.system.managedbuilder.toolchain.cfjoinTool.1851504929" name="System Builder" superClass="com.xilinx.sdx.system.managedbuilder.toolchain.cfjoinTool"/>
+                            						
+                        </toolChain>
+                        					
+                    </folderInfo>
+                    				
+                </configuration>
+                			
+            </storageModule>
+            			
+            <storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+            		
+        </cconfiguration>
+        		
+        <cconfiguration id="com.xilinx.sdx.system.managedbuilder.hwemu.configuration.2099859345">
+            			
+            <storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.xilinx.sdx.system.managedbuilder.hwemu.configuration.2099859345" moduleId="org.eclipse.cdt.core.settings" name="Emulation-HW">
+                				
+                <externalSettings/>
+                				
+                <extensions>
+                    					
+                    <extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+                    				
+                </extensions>
+                			
+            </storageModule>
+            			
+            <storageModule moduleId="cdtBuildSystem" version="4.0.0">
+                				
+                <configuration artifactName="${ProjName}" buildProperties="" description="" id="com.xilinx.sdx.system.managedbuilder.hwemu.configuration.2099859345" name="Emulation-HW" parent="com.xilinx.sdx.system.managedbuilder.hwemu.configuration">
+                    					
+                    <folderInfo id="com.xilinx.sdx.system.managedbuilder.hwemu.configuration.2099859345." name="/" resourcePath="">
+                        						
+                        <toolChain id="com.xilinx.sdx.system.managedbuilder.hw_emu.52046832" name="System Toolchain" superClass="com.xilinx.sdx.system.managedbuilder.hw_emu">
+                            							
+                            <targetPlatform id="com.xilinx.sdx.system.managedbuilder.hwemu.configuration.2099859345..1394246398" name=""/>
+                            							
+                            <builder buildPath="${workspace_loc:/micropython_embed_system}/Emulation-HW" enableAutoBuild="true" id="com.xilinx.sdx.system.managedbuilder.systemBuilder.1068860534" managedBuildOn="true" name="System Project Builder.Emulation-HW" superClass="com.xilinx.sdx.system.managedbuilder.systemBuilder"/>
+                            							
+                            <tool id="com.xilinx.sdx.system.managedbuilder.toolchain.cfjoinTool.438885081" name="System Builder" superClass="com.xilinx.sdx.system.managedbuilder.toolchain.cfjoinTool"/>
+                            						
+                        </toolChain>
+                        					
+                    </folderInfo>
+                    				
+                </configuration>
+                			
+            </storageModule>
+            			
+            <storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+            		
+        </cconfiguration>
+        		
+        <cconfiguration id="com.xilinx.sdx.system.managedbuilder.hw.configuration.1235413395">
+            			
+            <storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.xilinx.sdx.system.managedbuilder.hw.configuration.1235413395" moduleId="org.eclipse.cdt.core.settings" name="Hardware">
+                				
+                <externalSettings/>
+                				
+                <extensions>
+                    					
+                    <extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+                    				
+                </extensions>
+                			
+            </storageModule>
+            			
+            <storageModule moduleId="cdtBuildSystem" version="4.0.0">
+                				
+                <configuration artifactName="${ProjName}" buildProperties="" description="" id="com.xilinx.sdx.system.managedbuilder.hw.configuration.1235413395" name="Hardware" parent="com.xilinx.sdx.system.managedbuilder.hw.configuration">
+                    					
+                    <folderInfo id="com.xilinx.sdx.system.managedbuilder.hw.configuration.1235413395." name="/" resourcePath="">
+                        						
+                        <toolChain id="com.xilinx.sdx.system.managedbuilder.hw.212131773" name="System Toolchain" superClass="com.xilinx.sdx.system.managedbuilder.hw">
+                            							
+                            <targetPlatform id="com.xilinx.sdx.system.managedbuilder.hw.configuration.1235413395..433769189" name=""/>
+                            							
+                            <builder buildPath="${workspace_loc:/micropython_embed_system}/Hardware" enableAutoBuild="true" id="com.xilinx.sdx.system.managedbuilder.systemBuilder.2110537389" managedBuildOn="true" name="System Project Builder.Hardware" superClass="com.xilinx.sdx.system.managedbuilder.systemBuilder"/>
+                            							
+                            <tool id="com.xilinx.sdx.system.managedbuilder.toolchain.cfjoinTool.1829097246" name="System Builder" superClass="com.xilinx.sdx.system.managedbuilder.toolchain.cfjoinTool"/>
+                            						
+                        </toolChain>
+                        					
+                    </folderInfo>
+                    				
+                </configuration>
+                			
+            </storageModule>
+            			
+            <storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+            		
+        </cconfiguration>
+        	
+    </storageModule>
+    	
+    <storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+    	
+    <storageModule moduleId="cdtBuildSystem" version="4.0.0">
+        		
+        <project id="micropython_embed_system.com.xilinx.sdx.system.managedbuilder.unified.projectType.1721914434" name="Vitis Unified System Project" projectType="com.xilinx.sdx.system.managedbuilder.unified.projectType"/>
+        	
+    </storageModule>
+    	
+    <storageModule moduleId="scannerConfiguration">
+        		
+        <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+        	
+    </storageModule>
+    	
+    <storageModule moduleId="refreshScope"/>
+    
+</cproject>

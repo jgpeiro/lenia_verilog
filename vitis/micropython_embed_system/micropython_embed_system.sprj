@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ASCII"?>
+<systemproject:SystemProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdsproject="http://www.xilinx.com/sdsproject" xmlns:systemproject="http://www.xilinx.com/systemproject" name="micropython_embed_system" platform="C:/Users/jgpei/workspace/MicroPythonPlatform/export/MicroPythonPlatform/MicroPythonPlatform.xpfm" platformUID="xilinx:ebaz:ebaz_basic2:0.0(custom)" sysConfig="MicroPythonPlatform" runtime="C/C++" rootFSLocation="" linuxImage="" sysroot="">
+  <configuration name="Emulation-SW" id="com.xilinx.sdx.system.managedbuilder.swemu.configuration.1707308881">
+    <configBuildOptions xsi:type="systemproject:SystemOptions">
+      <applications name="micropython_embed" domainName="standalone_ps7_cortexa9_0" domainPrettyName="standalone_ps7_cortexa9_0" appBuildConfig="Debug"/>
+      <options xsi:type="sdsproject:Option" gensdcard="true" dmclkid="0"/>
+    </configBuildOptions>
+    <lastBuildOptions xsi:type="systemproject:SystemOptions">
+      <applications name="micropython_embed" domainName="standalone_ps7_cortexa9_0" domainPrettyName="standalone_ps7_cortexa9_0" appBuildConfig="Debug"/>
+      <options xsi:type="sdsproject:Option" gensdcard="true" dmclkid="0"/>
+    </lastBuildOptions>
+  </configuration>
+  <configuration name="Emulation-HW" id="com.xilinx.sdx.system.managedbuilder.hwemu.configuration.2099859345">
+    <configBuildOptions xsi:type="systemproject:SystemOptions" target="hw_emu">
+      <applications name="micropython_embed" domainName="standalone_ps7_cortexa9_0" domainPrettyName="standalone_ps7_cortexa9_0" appBuildConfig="Debug"/>
+      <options xsi:type="sdsproject:Option" gensdcard="true" dmclkid="0"/>
+    </configBuildOptions>
+  </configuration>
+  <configuration name="Hardware" id="com.xilinx.sdx.system.managedbuilder.hw.configuration.1235413395">
+    <configBuildOptions xsi:type="systemproject:SystemOptions" target="hw">
+      <applications name="micropython_embed" domainName="standalone_ps7_cortexa9_0" domainPrettyName="standalone_ps7_cortexa9_0" appBuildConfig="Debug"/>
+      <options xsi:type="sdsproject:Option" gensdcard="true" dmclkid="0"/>
+    </configBuildOptions>
+  </configuration>
+</systemproject:SystemProject>

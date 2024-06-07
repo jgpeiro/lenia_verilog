@@ -1,0 +1,60 @@
+[
+ {
+  "InstFile" : "C:/git/lenia_verilog/verilog/src/div.v",
+  "InstLine" : 1,
+  "InstName" : "Div",
+  "ModuleFile" : "C:/git/lenia_verilog/verilog/src/div.v",
+  "ModuleLine" : 1,
+  "ModuleName" : "Div"
+ },
+ {
+  "InstFile" : "C:/git/lenia_verilog/verilog/src/top.v",
+  "InstLine" : 106,
+  "InstName" : "top",
+  "ModuleFile" : "C:/git/lenia_verilog/verilog/src/top.v",
+  "ModuleLine" : 106,
+  "ModuleName" : "top",
+  "SubInsts" : [
+   {
+    "InstFile" : "C:/git/lenia_verilog/verilog/src/top.v",
+    "InstLine" : 266,
+    "InstName" : "fb_ctrl",
+    "ModuleFile" : "C:/git/lenia_verilog/verilog/src/top.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "FramebufferController"
+   },
+   {
+    "InstFile" : "C:/git/lenia_verilog/verilog/src/top.v",
+    "InstLine" : 275,
+    "InstName" : "draw_eng",
+    "ModuleFile" : "C:/git/lenia_verilog/verilog/src/top.v",
+    "ModuleLine" : 33,
+    "ModuleName" : "DrawingEngine"
+   },
+   {
+    "InstFile" : "C:/git/lenia_verilog/verilog/src/top.v",
+    "InstLine" : 286,
+    "InstName" : "pll",
+    "ModuleFile" : "C:/git/lenia_verilog/verilog/src/gowin_rpll/gowin_rpll.v",
+    "ModuleLine" : 10,
+    "ModuleName" : "Gowin_rPLL"
+   },
+   {
+    "InstFile" : "C:/git/lenia_verilog/verilog/src/top.v",
+    "InstLine" : 293,
+    "InstName" : "u_sdram",
+    "ModuleFile" : "C:/git/lenia_verilog/verilog/src/sdram.v",
+    "ModuleLine" : 23,
+    "ModuleName" : "sdram"
+   },
+   {
+    "InstFile" : "C:/git/lenia_verilog/verilog/src/top.v",
+    "InstLine" : 321,
+    "InstName" : "vga0",
+    "ModuleFile" : "C:/git/lenia_verilog/verilog/src/vga.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "Vga"
+   }
+  ]
+ }
+]
